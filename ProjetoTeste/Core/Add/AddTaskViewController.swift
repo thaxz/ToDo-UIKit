@@ -49,21 +49,23 @@ class AddTaskViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func saveNewTask(_ sender: UIButton) {
-        guard let title = titleTextView.text, !title.isEmpty,
-              let description = descriptionTextView.text, !description.isEmpty else {
-            displayAlert(message: "Por favor, preencha todos os campos.")
-            return
-        }
-        
-        if let task = taskToEdit {
-            // Se taskToEdit não for nil, estamos editando uma tarefa existente.
-            coreDataManager.updateTask(task: task, newTitle: title, newDescription: description)
-            editDelegate?.didEditTask(task: task)
-        } else {
-            // Caso contrário, estamos adicionando uma nova tarefa.
-            coreDataManager.createTask(title: title, description: description)
-        }
-        navigationController?.popViewController(animated: true)
+        guard let title = titleTextView.text,
+                      let description = descriptionTextView.text,
+                      title != "Digite o título da tarefa...",
+                      description != "Digite a descrição da tarefa..." else {
+                    displayAlert(message: "Por favor, preencha todos os campos.")
+                    return
+                }
+                
+                if let task = taskToEdit {
+                    // Se taskToEdit não for nil, estamos editando uma tarefa existente.
+                    coreDataManager.updateTask(task: task, newTitle: title, newDescription: description)
+                    editDelegate?.didEditTask(task: task)
+                } else {
+                    // Caso contrário, estamos adicionando uma nova tarefa.
+                    coreDataManager.createTask(title: title, description: description)
+                }
+                navigationController?.popViewController(animated: true)
     }
     
 }
