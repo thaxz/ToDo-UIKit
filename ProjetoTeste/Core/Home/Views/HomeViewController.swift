@@ -9,6 +9,7 @@ class HomeViewController: UIViewController {
     
     // MARK: Outlets
     
+    @IBOutlet var noTasksView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: Properties
@@ -24,6 +25,7 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         navigationItem.leftBarButtonItem = editButtonItem
         reloadData()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +42,7 @@ class HomeViewController: UIViewController {
     
     private func reloadData(){
         tasks = coreDataManager.fetchTasks()
+        noTasksView.isHidden = !tasks.isEmpty
         tableView.reloadData()
     }
     
