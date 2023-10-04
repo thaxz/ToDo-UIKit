@@ -11,17 +11,28 @@ class TaskDetailViewController: UIViewController {
     
     // MARK: Components
 
-    @IBOutlet var taskTitle: UILabel!
-    @IBOutlet var taskDescription: UILabel!
-    @IBOutlet var taskCreationDate: UILabel!
+    @IBOutlet var taskTitleLabel: UILabel!
+    @IBOutlet var taskDescriptionLabel: UILabel!
+    @IBOutlet var creationDateLabel: UILabel!
+    
+    var task: Task?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
     }
     
-
+        private func setupUI() {
+            if let task = task {
+                taskTitleLabel.text = task.title
+                taskDescriptionLabel.text = task.taskDescription
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+                if let dateCreated = task.dateCreated {
+                    creationDateLabel.text = dateFormatter.string(from: dateCreated)
+                }
+            }
+        }
    
 
 }

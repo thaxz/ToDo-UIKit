@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Task: Codable {
+struct OldTask: Codable {
     
     let title: String
     let description: String
