@@ -5,7 +5,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     /// Tabela que exibe as tarefas existentes
     @IBOutlet weak var tableView: UITableView!
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return taskManager.getTasks().count
     }
@@ -36,6 +36,6 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension HomeViewController: UITableViewDelegate {
     // TODO: implementar comportamento ao selecionar uma tarefa
 }
