@@ -12,7 +12,7 @@ class CoreDataManager {
     
     static let shared = CoreDataManager()
     
-    // Persistence objects
+    /// Persistence objects
     let container: NSPersistentContainer
     let context: NSManagedObjectContext
     
@@ -27,18 +27,6 @@ class CoreDataManager {
         print("working")
     }
     
-    // MARK: CRUD
-    
-    ///Create
-    func createTask(title: String, description: String) -> Task {
-        let task = Task(context: context)
-        task.id = UUID()
-        task.title = title
-        task.taskDescription = description
-        task.dateCreated = Date()
-        return task
-    }
-    
     // MARK: Save
     func save(){
         do {
@@ -47,4 +35,45 @@ class CoreDataManager {
             print("Error saving core data \(error.localizedDescription)")
         }
     }
+    
+    // MARK: Fetch
+    
+    func fetchTasks() -> [Task] {
+        let request: NSFetchRequest<Task> = Task.fetchRequest()
+        do {
+            return try context.fetch(request)
+        } catch {
+            print("error fetching \(error)")
+            return []
+        }
+    }
+    
+    // MARK: CRUD FUNCTIONS
+    
+    ///Create
+    func createTask(title: String, description: String) -> Task {
+        let task = Task(context: context)
+        task.id = UUID()
+        task.title = title
+        task.taskDescription = description
+        task.dateCreated = Date()
+        save()
+        return task
+    }
+    
+    /// Remove
+    func delete(task: Task){
+        context.delete(task)
+        save()
+    }
+    
+
+    /// Update
+    func updateTask(task: Task, newTitle: String, newDescription: String){
+        task.title = newTitle
+        task.taskDescription = newDescription
+        save()
+    }
+    
+    
 }
