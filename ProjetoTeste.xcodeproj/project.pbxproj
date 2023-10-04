@@ -182,6 +182,7 @@
 		E96D54CB2ACDC9E300FD8D76 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BA7A97C72A79A6CF005F349F /* TaskTableViewCell.swift */,
 				BA7A97912A794CF2005F349F /* HomeViewController.swift */,
 			);
 			path = Views;
@@ -190,7 +191,6 @@
 		E96D54CC2ACDC9E900FD8D76 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				BA7A97C72A79A6CF005F349F /* TaskTableViewCell.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
