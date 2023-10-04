@@ -11,29 +11,31 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     /// Gerenciador de tarefas
-    let taskManager = TaskManager()
+    private let coreDataManager = CoreDataManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.dataSource = self
         tableView.delegate = self
 
-        taskManager.loadTasks()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+        tableView.reloadData()
+        }
     
     
 }
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return taskManager.getTasks().count
+        return coreDataManager.fetchTasks().count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskTableViewCell
-        let task = taskManager.getTasks()[indexPath.row]
+        let task = coreDataManager.fetchTasks()[indexPath.row]
         cell.titleLabel.text = task.title
         return cell
     }

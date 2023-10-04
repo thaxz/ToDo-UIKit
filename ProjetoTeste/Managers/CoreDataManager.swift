@@ -51,14 +51,13 @@ class CoreDataManager {
     // MARK: CRUD FUNCTIONS
     
     ///Create
-    func createTask(title: String, description: String) -> Task {
+    func createTask(title: String, description: String) {
         let task = Task(context: context)
         task.id = UUID()
         task.title = title
         task.taskDescription = description
         task.dateCreated = Date()
         save()
-        return task
     }
     
     /// Remove
