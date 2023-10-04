@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dxh-8Z-bP5">
-                                <rect key="frame" x="12" y="131" width="366" height="659"/>
+                                <rect key="frame" x="12" y="111" width="366" height="679"/>
                                 <color key="backgroundColor" name="BgColor"/>
                                 <color key="separatorColor" name="AccentColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BgColor"/>
@@ -62,7 +62,7 @@
                         <color key="backgroundColor" name="BgColor"/>
                         <constraints>
                             <constraint firstItem="Dxh-8Z-bP5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="KGL-r1-Cax"/>
-                            <constraint firstItem="Dxh-8Z-bP5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="PdE-B9-i5z"/>
+                            <constraint firstItem="Dxh-8Z-bP5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="PdE-B9-i5z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dxh-8Z-bP5" secondAttribute="bottom" constant="20" id="duf-c5-7xT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dxh-8Z-bP5" secondAttribute="trailing" constant="12" id="zeO-ju-759"/>
                         </constraints>
@@ -175,25 +175,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created at:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faH-vi-Uue">
-                                <rect key="frame" x="16" y="190.33333333333334" width="358" height="23"/>
+                                <rect key="frame" x="16" y="196" width="358" height="23"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" name="TitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateOfCreation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2n-bE-SRr">
-                                <rect key="frame" x="16" y="229.33333333333334" width="358" height="21"/>
+                                <rect key="frame" x="16" y="235" width="358" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tastTitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50g-V2-JDu">
-                                <rect key="frame" x="16" y="107" width="358" height="23"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <rect key="frame" x="16" y="107" width="358" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" name="TitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="taskDescription" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TD-Jv-yo8">
-                                <rect key="frame" x="16" y="146" width="358" height="20.333333333333343"/>
+                                <rect key="frame" x="16" y="151.66666666666666" width="358" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -257,7 +257,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kHS-oI-fCf"/>
+        <segue reference="o4Z-C5-mbo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>

@@ -25,6 +25,7 @@
 		E96D54E02ACDF4B200FD8D76 /* CustomAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54DF2ACDF4B200FD8D76 /* CustomAlarm.swift */; };
 		E96D54E22ACDF50D00FD8D76 /* ProjectSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E12ACDF50D00FD8D76 /* ProjectSegues.swift */; };
 		E96D54E42ACE046700FD8D76 /* AddTask+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E32ACE046700FD8D76 /* AddTask+TextViewDelegate.swift */; };
+		E96D54E62ACE06B900FD8D76 /* HomeView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E52ACE06B900FD8D76 /* HomeView+TableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		E96D54DF2ACDF4B200FD8D76 /* CustomAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlarm.swift; sourceTree = "<group>"; };
 		E96D54E12ACDF50D00FD8D76 /* ProjectSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSegues.swift; sourceTree = "<group>"; };
 		E96D54E32ACE046700FD8D76 /* AddTask+TextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddTask+TextViewDelegate.swift"; sourceTree = "<group>"; };
+		E96D54E52ACE06B900FD8D76 /* HomeView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+TableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			children = (
 				BA7A97C72A79A6CF005F349F /* TaskTableViewCell.swift */,
 				BA7A97912A794CF2005F349F /* HomeViewController.swift */,
+				E96D54E52ACE06B900FD8D76 /* HomeView+TableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				E96D54CE2ACDCA4D00FD8D76 /* TaskDetailViewController.swift in Sources */,
 				E96D54D12ACDD2D300FD8D76 /* AddTaskViewController.swift in Sources */,
 				BA7A97922A794CF2005F349F /* HomeViewController.swift in Sources */,
+				E96D54E62ACE06B900FD8D76 /* HomeView+TableView.swift in Sources */,
 				E96D54E42ACE046700FD8D76 /* AddTask+TextViewDelegate.swift in Sources */,
 				BA7A978E2A794CF2005F349F /* AppDelegate.swift in Sources */,
 				E96D54E02ACDF4B200FD8D76 /* CustomAlarm.swift in Sources */,
