@@ -26,6 +26,7 @@
 		E96D54E22ACDF50D00FD8D76 /* ProjectSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E12ACDF50D00FD8D76 /* ProjectSegues.swift */; };
 		E96D54E42ACE046700FD8D76 /* AddTask+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E32ACE046700FD8D76 /* AddTask+TextViewDelegate.swift */; };
 		E96D54E62ACE06B900FD8D76 /* HomeView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E52ACE06B900FD8D76 /* HomeView+TableView.swift */; };
+		E96D54E92ACE091300FD8D76 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E82ACE091300FD8D76 /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		E96D54E12ACDF50D00FD8D76 /* ProjectSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSegues.swift; sourceTree = "<group>"; };
 		E96D54E32ACE046700FD8D76 /* AddTask+TextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddTask+TextViewDelegate.swift"; sourceTree = "<group>"; };
 		E96D54E52ACE06B900FD8D76 /* HomeView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+TableView.swift"; sourceTree = "<group>"; };
+		E96D54E82ACE091300FD8D76 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 		E96D54DD2ACDF48300FD8D76 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E96D54E72ACE090500FD8D76 /* Extensions */,
 				E96D54DF2ACDF4B200FD8D76 /* CustomAlarm.swift */,
 			);
 			path = Utilities;
@@ -227,6 +230,14 @@
 				9E750BC62ABA344C00BC3B46 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E96D54E72ACE090500FD8D76 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E96D54E82ACE091300FD8D76 /* DateFormatter.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +381,7 @@
 				E96D54D82ACDDBF200FD8D76 /* Task+CoreDataProperties.swift in Sources */,
 				BA7A97C82A79A6D0005F349F /* TaskTableViewCell.swift in Sources */,
 				E96D54D42ACDD88F00FD8D76 /* Task.xcdatamodeld in Sources */,
+				E96D54E92ACE091300FD8D76 /* DateFormatter.swift in Sources */,
 				E96D54E22ACDF50D00FD8D76 /* ProjectSegues.swift in Sources */,
 				BA7A97902A794CF2005F349F /* SceneDelegate.swift in Sources */,
 				E96D54DA2ACDDD0100FD8D76 /* CoreDataManager.swift in Sources */,

@@ -22,21 +22,19 @@ class TaskDetailViewController: UIViewController, TaskEditDelegate {
         setupUI()
     }
     
+    func didEditTask(task: Task) {
+        self.task = task
+        setupUI()
+    }
+    
     private func setupUI() {
         if let task = task {
             taskTitleLabel.text = task.title
             taskDescriptionLabel.text = task.taskDescription
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
             if let dateCreated = task.dateCreated {
-                creationDateLabel.text = dateFormatter.string(from: dateCreated)
+                creationDateLabel.text = DateFormatter.customDateFormatter.string(from: dateCreated)
             }
         }
-    }
-    
-    func didEditTask(task: Task) {
-        self.task = task
-        setupUI()
     }
     
     @IBAction func editTask(_ sender: Any) {
@@ -45,12 +43,12 @@ class TaskDetailViewController: UIViewController, TaskEditDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == ProjectSegues.showEditView.rawValue {
-                   if let destinationVC = segue.destination as? AddTaskViewController,
-                      let taskToEdit = sender as? Task {
-                       destinationVC.taskToEdit = taskToEdit
-                       destinationVC.editDelegate = self
-                   }
-               }
+            if let destinationVC = segue.destination as? AddTaskViewController,
+               let taskToEdit = sender as? Task {
+                destinationVC.taskToEdit = taskToEdit
+                destinationVC.editDelegate = self
+            }
+        }
     }
     
 }
