@@ -34,8 +34,8 @@ class AddTaskViewController: UIViewController {
     // MARK: UI Setup
     
     private func setupUI() {
-        setupTextView(titleTextView, withPlaceholder: "Digite o título da tarefa...")
-        setupTextView(descriptionTextView, withPlaceholder: "Digite a descrição da tarefa...")
+        setupTextView(titleTextView, withPlaceholder: "Digite o título da tarefa")
+        setupTextView(descriptionTextView, withPlaceholder: "Digite a descrição da tarefa")
         
         if let task = taskToEdit {
             titleTextView.text = task.title
@@ -51,8 +51,8 @@ class AddTaskViewController: UIViewController {
     @IBAction func saveNewTask(_ sender: UIButton) {
         guard let title = titleTextView.text,
                       let description = descriptionTextView.text,
-                      title != "Digite o título da tarefa...",
-                      description != "Digite a descrição da tarefa..." else {
+                      title != "Digite o título da tarefa",
+                      description != "Digite a descrição da tarefa" else {
                     displayAlert(message: "Por favor, preencha todos os campos.")
                     return
                 }

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--To-Do-->
+        <!--Tarefas-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="ProjetoTeste" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,7 +67,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dxh-8Z-bP5" secondAttribute="trailing" constant="12" id="zeO-ju-759"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="To-Do" largeTitleDisplayMode="always" id="Voa-lX-OwV">
+                    <navigationItem key="navigationItem" title="Tarefas" largeTitleDisplayMode="always" id="Voa-lX-OwV">
                         <barButtonItem key="rightBarButtonItem" title="addButton" image="plus" catalog="system" id="BtN-wG-2Ah">
                             <color key="tintColor" name="AccentColor"/>
                             <connections>
@@ -84,7 +84,7 @@
             </objects>
             <point key="canvasLocation" x="843.07692307692309" y="-28.436018957345969"/>
         </scene>
-        <!--Add a new task-->
+        <!--Adicione uma tarefa-->
         <scene sceneID="E9Q-IK-5AP">
             <objects>
                 <viewController id="L6x-rE-Dyh" customClass="AddTaskViewController" customModule="ProjetoTeste" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,13 +92,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAG-4W-J0U">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAG-4W-J0U">
                                 <rect key="frame" x="16" y="159" width="358" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" name="TitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHK-hs-kjm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHK-hs-kjm">
                                 <rect key="frame" x="16" y="300" width="358" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" name="TitleColor"/>
@@ -110,14 +110,16 @@
                                     <constraint firstAttribute="height" constant="45" id="mLz-Uq-YWc"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Save" cornerStyle="medium"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Adicionar" cornerStyle="medium">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="saveNewTask:" destination="L6x-rE-Dyh" eventType="touchUpInside" id="9yS-uj-Crf"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Eb-A6-Fwe">
                                 <rect key="frame" x="16" y="204" width="358" height="80"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="backgroundColor" name="CustomGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="qY0-PG-Xze"/>
                                 </constraints>
@@ -127,7 +129,7 @@
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f6b-jN-gGv">
                                 <rect key="frame" x="16" y="345" width="358" height="80"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="backgroundColor" name="CustomGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="fLv-Mu-6EU"/>
                                 </constraints>
@@ -156,7 +158,7 @@
                             <constraint firstItem="dTa-ri-3KZ" firstAttribute="trailing" secondItem="4Eb-A6-Fwe" secondAttribute="trailing" constant="16" id="qCI-Ye-TVd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add a new task" largeTitleDisplayMode="always" id="U0v-fm-fSP"/>
+                    <navigationItem key="navigationItem" title="Adicione uma tarefa" largeTitleDisplayMode="always" id="U0v-fm-fSP"/>
                     <connections>
                         <outlet property="descriptionTextView" destination="f6b-jN-gGv" id="41g-TA-9AU"/>
                         <outlet property="titleTextView" destination="4Eb-A6-Fwe" id="QFX-8r-iNb"/>
@@ -174,7 +176,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created at:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faH-vi-Uue">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criada em:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faH-vi-Uue">
                                 <rect key="frame" x="16" y="196" width="358" height="23"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" name="TitleColor"/>
@@ -183,7 +185,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateOfCreation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2n-bE-SRr">
                                 <rect key="frame" x="16" y="235" width="358" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tastTitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50g-V2-JDu">
@@ -195,7 +197,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="taskDescription" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TD-Jv-yo8">
                                 <rect key="frame" x="16" y="151.66666666666666" width="358" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -245,6 +247,9 @@
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" name="TitleColor"/>
                         </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="TitleColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -257,24 +262,24 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kHS-oI-fCf"/>
+        <segue reference="o4Z-C5-mbo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
-            <color red="1" green="0.73000001907348633" blue="0.84399998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="1" green="0.45083971088435371" blue="0.68270732924222444" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="BgColor">
             <color red="0.94900000095367432" green="0.95499998331069946" blue="0.94300001859664917" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="CustomGrayColor">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TitleColor">
             <color red="0.31499999761581421" green="0.089000001549720764" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
