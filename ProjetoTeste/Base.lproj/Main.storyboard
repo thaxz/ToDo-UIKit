@@ -86,7 +86,7 @@
         <!--Add an item-->
         <scene sceneID="E9Q-IK-5AP">
             <objects>
-                <viewController id="L6x-rE-Dyh" sceneMemberID="viewController">
+                <viewController id="L6x-rE-Dyh" customClass="AddTaskViewController" customModule="ProjetoTeste" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oe3-3D-gAr">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,6 +108,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save" cornerStyle="medium"/>
+                                <connections>
+                                    <action selector="saveNewTask:" destination="L6x-rE-Dyh" eventType="touchUpInside" id="9yS-uj-Crf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dTa-ri-3KZ"/>
@@ -122,6 +125,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add an item" largeTitleDisplayMode="always" id="U0v-fm-fSP"/>
+                    <connections>
+                        <outlet property="addTextField" destination="35b-uc-ZMw" id="lSA-on-tM0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RsC-Mc-WiW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -130,7 +136,7 @@
         <!--Task Details-->
         <scene sceneID="VVe-pU-hv3">
             <objects>
-                <viewController id="exg-e2-VsZ" sceneMemberID="viewController">
+                <viewController id="exg-e2-VsZ" customClass="TaskDetailViewController" customModule="ProjetoTeste" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ECa-nO-Exl">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
