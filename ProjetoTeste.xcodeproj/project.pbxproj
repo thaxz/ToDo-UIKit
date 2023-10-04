@@ -22,7 +22,6 @@
 		E96D54D42ACDD88F00FD8D76 /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E96D54D22ACDD88F00FD8D76 /* Task.xcdatamodeld */; };
 		E96D54D82ACDDBF200FD8D76 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54D62ACDDBF200FD8D76 /* Task+CoreDataProperties.swift */; };
 		E96D54DA2ACDDD0100FD8D76 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54D92ACDDD0100FD8D76 /* CoreDataManager.swift */; };
-		E96D54E02ACDF4B200FD8D76 /* CustomAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54DF2ACDF4B200FD8D76 /* CustomAlarm.swift */; };
 		E96D54E22ACDF50D00FD8D76 /* ProjectSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E12ACDF50D00FD8D76 /* ProjectSegues.swift */; };
 		E96D54E42ACE046700FD8D76 /* AddTask+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E32ACE046700FD8D76 /* AddTask+TextViewDelegate.swift */; };
 		E96D54E62ACE06B900FD8D76 /* HomeView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E52ACE06B900FD8D76 /* HomeView+TableView.swift */; };
@@ -67,7 +66,6 @@
 		E96D54D32ACDD88F00FD8D76 /* Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task.xcdatamodel; sourceTree = "<group>"; };
 		E96D54D62ACDDBF200FD8D76 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E96D54D92ACDDD0100FD8D76 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		E96D54DF2ACDF4B200FD8D76 /* CustomAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlarm.swift; sourceTree = "<group>"; };
 		E96D54E12ACDF50D00FD8D76 /* ProjectSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSegues.swift; sourceTree = "<group>"; };
 		E96D54E32ACE046700FD8D76 /* AddTask+TextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddTask+TextViewDelegate.swift"; sourceTree = "<group>"; };
 		E96D54E52ACE06B900FD8D76 /* HomeView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+TableView.swift"; sourceTree = "<group>"; };
@@ -126,10 +124,10 @@
 				BA7A978D2A794CF2005F349F /* AppDelegate.swift */,
 				BA7A978F2A794CF2005F349F /* SceneDelegate.swift */,
 				E96D54DE2ACDF48C00FD8D76 /* Storyboard */,
-				E96D54DD2ACDF48300FD8D76 /* Utilities */,
+				E96D54C52ACDC84D00FD8D76 /* Managers */,
 				E96D54C32ACDC83D00FD8D76 /* Models */,
 				E96D54C62ACDC85700FD8D76 /* Core */,
-				E96D54C52ACDC84D00FD8D76 /* Managers */,
+				E96D54DD2ACDF48300FD8D76 /* Utilities */,
 				BA7A97962A794CFA005F349F /* Assets.xcassets */,
 				BA7A979B2A794CFA005F349F /* Info.plist */,
 			);
@@ -220,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				E96D54E72ACE090500FD8D76 /* Extensions */,
-				E96D54DF2ACDF4B200FD8D76 /* CustomAlarm.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -381,7 +378,6 @@
 				E96D54E62ACE06B900FD8D76 /* HomeView+TableView.swift in Sources */,
 				E96D54E42ACE046700FD8D76 /* AddTask+TextViewDelegate.swift in Sources */,
 				BA7A978E2A794CF2005F349F /* AppDelegate.swift in Sources */,
-				E96D54E02ACDF4B200FD8D76 /* CustomAlarm.swift in Sources */,
 				E96D54D82ACDDBF200FD8D76 /* Task+CoreDataProperties.swift in Sources */,
 				BA7A97C82A79A6D0005F349F /* TaskTableViewCell.swift in Sources */,
 				E96D54D42ACDD88F00FD8D76 /* Task.xcdatamodeld in Sources */,

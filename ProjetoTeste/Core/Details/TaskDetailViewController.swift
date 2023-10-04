@@ -9,23 +9,31 @@ import UIKit
 
 class TaskDetailViewController: UIViewController, TaskEditDelegate {
     
-    // MARK: Components
+    // MARK: Outlets
     
     @IBOutlet var taskTitleLabel: UILabel!
     @IBOutlet var taskDescriptionLabel: UILabel!
     @IBOutlet var creationDateLabel: UILabel!
     
+    // MARK: Properties
+    
     var task: Task?
+    
+    // MARK: View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
+    // MARK: Delegate
+    
     func didEditTask(task: Task) {
         self.task = task
         setupUI()
     }
+    
+    // MARK: UI Setup
     
     private func setupUI() {
         if let task = task {
@@ -37,9 +45,13 @@ class TaskDetailViewController: UIViewController, TaskEditDelegate {
         }
     }
     
+    // MARK: Actions
+    
     @IBAction func editTask(_ sender: Any) {
         performSegue(withIdentifier: ProjectSegues.showEditView.rawValue, sender: task)
     }
+    
+    // MARK: Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == ProjectSegues.showEditView.rawValue {

@@ -13,25 +13,25 @@ protocol TaskEditDelegate: AnyObject {
 
 class AddTaskViewController: UIViewController {
     
-    //MARK: - Outlets
+    //MARK: Outlets
     
     @IBOutlet var titleTextView: UITextView!
     @IBOutlet var descriptionTextView: UITextView!
     
-    // MARK: - Properties
+    // MARK: Properties
     
     private var coreDataManager = CoreDataManager.shared
     var taskToEdit: Task?
     weak var editDelegate: TaskEditDelegate?
     
-    // MARK: - View Lifecycle
+    // MARK: View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
-    // MARK: - UI Setup
+    // MARK: UI Setup
     
     private func setupUI() {
         setupTextView(titleTextView, withPlaceholder: "Digite o título da tarefa...")
@@ -46,12 +46,11 @@ class AddTaskViewController: UIViewController {
         }
     }
     
-    // MARK: - Actions
+    // MARK: Actions
     
     @IBAction func saveNewTask(_ sender: UIButton) {
         guard let title = titleTextView.text, !title.isEmpty,
               let description = descriptionTextView.text, !description.isEmpty else {
-            // Mostrar um alerta ao usuário indicando que os campos são obrigatórios.
             displayAlert(message: "Por favor, preencha todos os campos.")
             return
         }
@@ -64,8 +63,6 @@ class AddTaskViewController: UIViewController {
             // Caso contrário, estamos adicionando uma nova tarefa.
             coreDataManager.createTask(title: title, description: description)
         }
-        
-        // Após adicionar ou editar a tarefa, você pode retornar à tela anterior, por exemplo:
         navigationController?.popViewController(animated: true)
     }
     

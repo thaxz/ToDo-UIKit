@@ -7,12 +7,16 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    /// Tabela que exibe as tarefas existentes
+    // MARK: Outlets
+    
     @IBOutlet weak var tableView: UITableView!
     
-    /// Gerenciador de tarefas
+    // MARK: Properties
+    
     let coreDataManager = CoreDataManager.shared
     var tasks: [Task] = []
+    
+    // MARK: View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +30,14 @@ class HomeViewController: UIViewController {
         reloadData()
     }
     
+    // MARK: Setup
+    
     private func reloadData(){
         tasks = coreDataManager.fetchTasks()
         tableView.reloadData()
     }
+    
+    // MARK: Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? TaskDetailViewController,
