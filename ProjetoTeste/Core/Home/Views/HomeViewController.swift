@@ -47,19 +47,15 @@ extension HomeViewController: UITableViewDataSource {
 }
 
 extension HomeViewController: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            let task = tasks[indexPath.row]
-            performSegue(withIdentifier: "showTaskDetailSegue", sender: task)
-        }
+        let task = tasks[indexPath.row]
+        performSegue(withIdentifier: "showTaskDetailSegue", sender: task)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "showTaskDetailSegue" {
-                if let destinationVC = segue.destination as? TaskDetailViewController,
-                   let task = sender as? Task {
-                    destinationVC.task = task
-                }
-            }
+        if let destinationVC = segue.destination as? TaskDetailViewController,
+           let task = sender as? Task {
+            destinationVC.task = task
         }
-    
+    }
 }
