@@ -15,9 +15,15 @@ class AddTaskViewController: UIViewController {
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var descriptionTextField: UITextField!
     
+    var taskToEdit: Task?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let task = taskToEdit {
+                    // Se taskToEdit não for nil, preencha os campos com os dados da tarefa para edição.
+                    titleTextField.text = task.title
+                    descriptionTextField.text = task.description
+                }
     }
     
     @IBAction func saveNewTask(_ sender: UIButton) {
@@ -27,7 +33,13 @@ class AddTaskViewController: UIViewController {
                    displayAlert(message: "Por favor, preencha todos os campos.")
                    return
                }
-        coreDataManager.createTask(title: title, description: description)
+        if let task = taskToEdit {
+                    // Se taskToEdit não for nil, estamos editando uma tarefa existente.
+                    coreDataManager.updateTask(task: task, newTitle: title, newDescription: description)
+                } else {
+                    // Caso contrário, estamos adicionando uma nova tarefa.
+                    coreDataManager.createTask(title: title, description: description)
+                }
         // Após adicionar a tarefa, você pode retornar à tela anterior, por exemplo:
                navigationController?.popViewController(animated: true)
     }

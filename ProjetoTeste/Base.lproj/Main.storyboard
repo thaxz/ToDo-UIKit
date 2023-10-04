@@ -49,7 +49,7 @@
                                         <color key="backgroundColor" name="BgColor"/>
                                         <connections>
                                             <outlet property="titleLabel" destination="0hC-7O-7ZE" id="5UH-KR-rSE"/>
-                                            <segue destination="exg-e2-VsZ" kind="show" identifier="showTaskDdetailSegue" id="sjf-By-9QR"/>
+                                            <segue destination="exg-e2-VsZ" kind="show" identifier="showTaskDetailSegue" id="sjf-By-9QR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -224,9 +224,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="taskCreationDate" destination="c2n-bE-SRr" id="cHl-Az-zhq"/>
-                        <outlet property="taskDescription" destination="3TD-Jv-yo8" id="5hr-Gr-pyH"/>
-                        <outlet property="taskTitle" destination="50g-V2-JDu" id="e6o-j9-rtm"/>
+                        <outlet property="creationDateLabel" destination="c2n-bE-SRr" id="cHl-Az-zhq"/>
+                        <outlet property="taskDescriptionLabel" destination="3TD-Jv-yo8" id="5hr-Gr-pyH"/>
+                        <outlet property="taskTitleLabel" destination="50g-V2-JDu" id="e6o-j9-rtm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ird-H1-Qrx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
