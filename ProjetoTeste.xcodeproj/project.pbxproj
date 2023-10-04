@@ -27,6 +27,7 @@
 		E96D54E62ACE06B900FD8D76 /* HomeView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E52ACE06B900FD8D76 /* HomeView+TableView.swift */; };
 		E96D54E92ACE091300FD8D76 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E82ACE091300FD8D76 /* DateFormatter.swift */; };
 		E96D54EB2ACE0AE100FD8D76 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54EA2ACE0AE100FD8D76 /* UIViewController+Alert.swift */; };
+		E96D54F12ACE2B9300FD8D76 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54F02ACE2B9300FD8D76 /* UIViewController+Keyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		E96D54E52ACE06B900FD8D76 /* HomeView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+TableView.swift"; sourceTree = "<group>"; };
 		E96D54E82ACE091300FD8D76 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		E96D54EA2ACE0AE100FD8D76 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		E96D54F02ACE2B9300FD8D76 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 			children = (
 				E96D54E82ACE091300FD8D76 /* DateFormatter.swift */,
 				E96D54EA2ACE0AE100FD8D76 /* UIViewController+Alert.swift */,
+				E96D54F02ACE2B9300FD8D76 /* UIViewController+Keyboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				E96D54D82ACDDBF200FD8D76 /* Task+CoreDataProperties.swift in Sources */,
 				BA7A97C82A79A6D0005F349F /* TaskTableViewCell.swift in Sources */,
 				E96D54D42ACDD88F00FD8D76 /* Task.xcdatamodeld in Sources */,
+				E96D54F12ACE2B9300FD8D76 /* UIViewController+Keyboard.swift in Sources */,
 				E96D54E92ACE091300FD8D76 /* DateFormatter.swift in Sources */,
 				E96D54E22ACDF50D00FD8D76 /* ProjectSegues.swift in Sources */,
 				BA7A97902A794CF2005F349F /* SceneDelegate.swift in Sources */,
