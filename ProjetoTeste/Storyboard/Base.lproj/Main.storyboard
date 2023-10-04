@@ -176,19 +176,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criada em:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faH-vi-Uue">
-                                <rect key="frame" x="16" y="196" width="358" height="23"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <color key="textColor" name="TitleColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateOfCreation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2n-bE-SRr">
-                                <rect key="frame" x="16" y="235" width="358" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tastTitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50g-V2-JDu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tastTitle" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="50g-V2-JDu">
                                 <rect key="frame" x="16" y="107" width="358" height="28.666666666666657"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" name="TitleColor"/>
@@ -200,22 +188,44 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cb5-Fm-EyV">
+                                <rect key="frame" x="16" y="196" width="358" height="2"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="NCB-BA-ONv"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criada em:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faH-vi-Uue">
+                                <rect key="frame" x="16" y="222" width="358" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" name="TitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateOfCreation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2n-bE-SRr">
+                                <rect key="frame" x="16" y="261" width="358" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8ml-mV-ruH"/>
                         <color key="backgroundColor" name="BgColor"/>
                         <constraints>
-                            <constraint firstItem="8ml-mV-ruH" firstAttribute="trailing" secondItem="50g-V2-JDu" secondAttribute="trailing" constant="16" id="4P4-WR-4k0"/>
-                            <constraint firstItem="3TD-Jv-yo8" firstAttribute="leading" secondItem="8ml-mV-ruH" secondAttribute="leading" constant="16" id="Cy2-bd-Zc2"/>
-                            <constraint firstItem="c2n-bE-SRr" firstAttribute="leading" secondItem="8ml-mV-ruH" secondAttribute="leading" constant="16" id="GoU-TK-xXC"/>
-                            <constraint firstItem="8ml-mV-ruH" firstAttribute="trailing" secondItem="faH-vi-Uue" secondAttribute="trailing" constant="16" id="OI6-Ap-BBU"/>
-                            <constraint firstItem="8ml-mV-ruH" firstAttribute="trailing" secondItem="c2n-bE-SRr" secondAttribute="trailing" constant="16" id="Ryc-mJ-1Hf"/>
-                            <constraint firstItem="50g-V2-JDu" firstAttribute="leading" secondItem="8ml-mV-ruH" secondAttribute="leading" constant="16" id="X1O-tu-Vn0"/>
-                            <constraint firstItem="3TD-Jv-yo8" firstAttribute="top" secondItem="50g-V2-JDu" secondAttribute="bottom" constant="16" id="gqH-Mu-Av8"/>
-                            <constraint firstItem="faH-vi-Uue" firstAttribute="top" secondItem="3TD-Jv-yo8" secondAttribute="bottom" constant="24" id="jPZ-cs-vbX"/>
-                            <constraint firstItem="50g-V2-JDu" firstAttribute="top" secondItem="8ml-mV-ruH" secondAttribute="top" constant="16" id="kPd-3x-prg"/>
-                            <constraint firstItem="c2n-bE-SRr" firstAttribute="top" secondItem="faH-vi-Uue" secondAttribute="bottom" constant="16" id="nbI-PJ-xbL"/>
-                            <constraint firstItem="8ml-mV-ruH" firstAttribute="trailing" secondItem="3TD-Jv-yo8" secondAttribute="trailing" constant="16" id="oAo-Of-QTz"/>
-                            <constraint firstItem="faH-vi-Uue" firstAttribute="leading" secondItem="8ml-mV-ruH" secondAttribute="leading" constant="16" id="rUz-bS-W9p"/>
+                            <constraint firstItem="3TD-Jv-yo8" firstAttribute="top" secondItem="50g-V2-JDu" secondAttribute="bottom" constant="16" id="6nx-Nr-hN9"/>
+                            <constraint firstItem="c2n-bE-SRr" firstAttribute="top" secondItem="faH-vi-Uue" secondAttribute="bottom" constant="16" id="Bh8-Ks-UTU"/>
+                            <constraint firstItem="50g-V2-JDu" firstAttribute="leading" secondItem="8ml-mV-ruH" secondAttribute="leading" constant="16" id="Kus-xC-B8g"/>
+                            <constraint firstItem="8ml-mV-ruH" firstAttribute="trailing" secondItem="c2n-bE-SRr" secondAttribute="trailing" constant="16" id="OSg-hs-vEu"/>
+                            <constraint firstItem="8ml-mV-ruH" firstAttribute="trailing" secondItem="faH-vi-Uue" secondAttribute="trailing" constant="16" id="T4U-96-6G9"/>
+                            <constraint firstItem="8ml-mV-ruH" firstAttribute="trailing" secondItem="50g-V2-JDu" secondAttribute="trailing" constant="16" id="VW6-Ad-3DE"/>
+                            <constraint firstItem="cb5-Fm-EyV" firstAttribute="leading" secondItem="8ml-mV-ruH" secondAttribute="leading" constant="16" id="cbV-DT-2jS"/>
+                            <constraint firstItem="8ml-mV-ruH" firstAttribute="trailing" secondItem="cb5-Fm-EyV" secondAttribute="trailing" constant="16" id="d5T-hU-lVH"/>
+                            <constraint firstItem="faH-vi-Uue" firstAttribute="leading" secondItem="8ml-mV-ruH" secondAttribute="leading" constant="16" id="hcN-eo-hAV"/>
+                            <constraint firstItem="c2n-bE-SRr" firstAttribute="leading" secondItem="8ml-mV-ruH" secondAttribute="leading" constant="16" id="itV-PU-7xa"/>
+                            <constraint firstItem="cb5-Fm-EyV" firstAttribute="top" secondItem="3TD-Jv-yo8" secondAttribute="bottom" constant="24" id="kbo-Bl-uEE"/>
+                            <constraint firstItem="50g-V2-JDu" firstAttribute="top" secondItem="8ml-mV-ruH" secondAttribute="top" constant="16" id="lby-JN-jgU"/>
+                            <constraint firstItem="3TD-Jv-yo8" firstAttribute="leading" secondItem="8ml-mV-ruH" secondAttribute="leading" constant="16" id="p2I-tY-Sri"/>
+                            <constraint firstItem="faH-vi-Uue" firstAttribute="top" secondItem="cb5-Fm-EyV" secondAttribute="bottom" constant="24" id="qLG-RT-XWB"/>
+                            <constraint firstItem="8ml-mV-ruH" firstAttribute="trailing" secondItem="3TD-Jv-yo8" secondAttribute="trailing" constant="16" id="wte-vz-vZe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="u4J-In-gCs">
