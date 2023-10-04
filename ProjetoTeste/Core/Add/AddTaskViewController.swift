@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TaskEditDelegate: AnyObject {
+    func didEditTask(task: Task)
+}
+
 class AddTaskViewController: UIViewController {
     
     private var coreDataManager = CoreDataManager.shared
@@ -16,6 +20,7 @@ class AddTaskViewController: UIViewController {
     @IBOutlet var descriptionTextField: UITextField!
     
     var taskToEdit: Task?
+    weak var editDelegate: TaskEditDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +47,7 @@ class AddTaskViewController: UIViewController {
                 if let task = taskToEdit {
                     // Se taskToEdit não for nil, estamos editando uma tarefa existente.
                     coreDataManager.updateTask(task: task, newTitle: title, newDescription: description)
+                                editDelegate?.didEditTask(task: task)
                 } else {
                     // Caso contrário, estamos adicionando uma nova tarefa.
                     coreDataManager.createTask(title: title, description: description)
