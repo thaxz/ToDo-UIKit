@@ -25,13 +25,17 @@ class AddTaskViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            setupUI()
+        setupUI()
     }
     
     private func setupUI() {
+        setupTextView(titleTextView, withPlaceholder: "Digite o título da tarefa...")
+        setupTextView(descriptionTextView, withPlaceholder: "Digite a descrição da tarefa...")
         if let task = taskToEdit {
             titleTextView.text = task.title
             descriptionTextView.text = task.taskDescription
+            titleTextView.textColor = .black
+            descriptionTextView.textColor = .black
             self.title = "Edit task"
         }
     }
