@@ -10,7 +10,8 @@ import UIKit
 class AddTaskViewController: UIViewController {
     
     // MARK: Components
-    @IBOutlet var addTextField: UITextField!
+    @IBOutlet var titleTextField: UITextField!
+    @IBOutlet var descriptionTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()

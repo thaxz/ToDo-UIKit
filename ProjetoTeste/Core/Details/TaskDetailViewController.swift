@@ -11,6 +11,7 @@ class TaskDetailViewController: UIViewController {
     
     // MARK: Components
 
+    @IBOutlet var taskTitle: UILabel!
     @IBOutlet var taskDescription: UILabel!
     @IBOutlet var taskCreationDate: UILabel!
     

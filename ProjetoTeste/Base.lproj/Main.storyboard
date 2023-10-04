@@ -158,7 +158,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add a new task" largeTitleDisplayMode="always" id="U0v-fm-fSP"/>
                     <connections>
-                        <outlet property="addTextField" destination="35b-uc-ZMw" id="lSA-on-tM0"/>
+                        <outlet property="descriptionTextField" destination="Z6s-PL-Bp6" id="3CE-2i-frr"/>
+                        <outlet property="titleTextField" destination="35b-uc-ZMw" id="lSA-on-tM0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RsC-Mc-WiW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -225,6 +226,7 @@
                     <connections>
                         <outlet property="taskCreationDate" destination="c2n-bE-SRr" id="cHl-Az-zhq"/>
                         <outlet property="taskDescription" destination="3TD-Jv-yo8" id="5hr-Gr-pyH"/>
+                        <outlet property="taskTitle" destination="50g-V2-JDu" id="e6o-j9-rtm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ird-H1-Qrx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -254,7 +256,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kHS-oI-fCf"/>
+        <segue reference="vSs-cf-HcO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
