@@ -20,28 +20,34 @@ class AddTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let task = taskToEdit {
-                    // Se taskToEdit não for nil, preencha os campos com os dados da tarefa para edição.
-                    titleTextField.text = task.title
-                    descriptionTextField.text = task.description
+                    setupUI()
                 }
     }
     
+    private func setupUI() {
+            if let task = taskToEdit {
+                titleTextField.text = task.title
+                descriptionTextField.text = task.taskDescription
+                self.title = "Edit task"
+            }
+        }
+    
     @IBAction func saveNewTask(_ sender: UIButton) {
         guard let title = titleTextField.text, !title.isEmpty,
-                     let description = descriptionTextField.text, !description.isEmpty else {
-                   // Mostrar um alerta ao usuário indicando que os campos são obrigatórios.
-                   displayAlert(message: "Por favor, preencha todos os campos.")
-                   return
-               }
-        if let task = taskToEdit {
+                      let description = descriptionTextField.text, !description.isEmpty else {
+                    // Mostrar um alerta ao usuário indicando que os campos são obrigatórios.
+                    displayAlert(message: "Por favor, preencha todos os campos.")
+                    return
+                }
+                if let task = taskToEdit {
                     // Se taskToEdit não for nil, estamos editando uma tarefa existente.
                     coreDataManager.updateTask(task: task, newTitle: title, newDescription: description)
                 } else {
                     // Caso contrário, estamos adicionando uma nova tarefa.
                     coreDataManager.createTask(title: title, description: description)
                 }
-        // Após adicionar a tarefa, você pode retornar à tela anterior, por exemplo:
-               navigationController?.popViewController(animated: true)
+                // Após adicionar ou editar a tarefa, você pode retornar à tela anterior, por exemplo:
+                navigationController?.popViewController(animated: true)
     }
     
     func displayAlert(message: String) {

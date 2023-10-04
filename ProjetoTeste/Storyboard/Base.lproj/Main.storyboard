@@ -219,7 +219,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="u4J-In-gCs">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="TAd-yG-06o">
                             <connections>
-                                <segue destination="L6x-rE-Dyh" kind="show" identifier="showEditView" id="vSs-cf-HcO"/>
+                                <action selector="editTask:" destination="exg-e2-VsZ" id="5s9-jy-euj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -227,6 +227,7 @@
                         <outlet property="creationDateLabel" destination="c2n-bE-SRr" id="cHl-Az-zhq"/>
                         <outlet property="taskDescriptionLabel" destination="3TD-Jv-yo8" id="5hr-Gr-pyH"/>
                         <outlet property="taskTitleLabel" destination="50g-V2-JDu" id="e6o-j9-rtm"/>
+                        <segue destination="L6x-rE-Dyh" kind="show" identifier="showEditView" id="o4Z-C5-mbo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ird-H1-Qrx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -256,7 +257,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vSs-cf-HcO"/>
+        <segue reference="o4Z-C5-mbo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>

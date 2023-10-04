@@ -34,5 +34,17 @@ class TaskDetailViewController: UIViewController {
             }
         }
    
-
+    @IBAction func editTask(_ sender: Any) {
+        performSegue(withIdentifier: ProjectSegues.showEditView.rawValue, sender: task)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ProjectSegues.showEditView.rawValue {
+            if let destinationVC = segue.destination as? AddTaskViewController,
+               let taskToEdit = sender as? Task {
+                destinationVC.taskToEdit = taskToEdit
+            }
+        }
+    }
+    
 }
