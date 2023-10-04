@@ -27,6 +27,7 @@
 		E96D54E42ACE046700FD8D76 /* AddTask+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E32ACE046700FD8D76 /* AddTask+TextViewDelegate.swift */; };
 		E96D54E62ACE06B900FD8D76 /* HomeView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E52ACE06B900FD8D76 /* HomeView+TableView.swift */; };
 		E96D54E92ACE091300FD8D76 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E82ACE091300FD8D76 /* DateFormatter.swift */; };
+		E96D54EB2ACE0AE100FD8D76 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54EA2ACE0AE100FD8D76 /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		E96D54E32ACE046700FD8D76 /* AddTask+TextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddTask+TextViewDelegate.swift"; sourceTree = "<group>"; };
 		E96D54E52ACE06B900FD8D76 /* HomeView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+TableView.swift"; sourceTree = "<group>"; };
 		E96D54E82ACE091300FD8D76 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		E96D54EA2ACE0AE100FD8D76 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				E96D54E82ACE091300FD8D76 /* DateFormatter.swift */,
+				E96D54EA2ACE0AE100FD8D76 /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96D54EB2ACE0AE100FD8D76 /* UIViewController+Alert.swift in Sources */,
 				E96D54CE2ACDCA4D00FD8D76 /* TaskDetailViewController.swift in Sources */,
 				E96D54D12ACDD2D300FD8D76 /* AddTaskViewController.swift in Sources */,
 				BA7A97922A794CF2005F349F /* HomeViewController.swift in Sources */,
