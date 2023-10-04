@@ -92,16 +92,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Type something here." minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="35b-uc-ZMw">
-                                <rect key="frame" x="16" y="204" width="358" height="80"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="CTu-Xh-ry6"/>
-                                </constraints>
-                                <color key="textColor" name="TitleColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAG-4W-J0U">
                                 <rect key="frame" x="16" y="159" width="358" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
@@ -114,20 +104,10 @@
                                 <color key="textColor" name="TitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Type something here." minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Z6s-PL-Bp6">
-                                <rect key="frame" x="16" y="345" width="358" height="80"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="S4v-a7-Ule"/>
-                                </constraints>
-                                <color key="textColor" name="TitleColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sl1-Lr-KbG">
                                 <rect key="frame" x="16" y="441" width="358" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="SLF-Kb-XKk"/>
+                                    <constraint firstAttribute="height" constant="45" id="mLz-Uq-YWc"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save" cornerStyle="medium"/>
@@ -135,36 +115,56 @@
                                     <action selector="saveNewTask:" destination="L6x-rE-Dyh" eventType="touchUpInside" id="9yS-uj-Crf"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Eb-A6-Fwe">
+                                <rect key="frame" x="16" y="204" width="358" height="80"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="qY0-PG-Xze"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f6b-jN-gGv">
+                                <rect key="frame" x="16" y="345" width="358" height="80"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="fLv-Mu-6EU"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dTa-ri-3KZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dTa-ri-3KZ" firstAttribute="trailing" secondItem="Sl1-Lr-KbG" secondAttribute="trailing" constant="16" id="81x-60-Y43"/>
-                            <constraint firstItem="Z6s-PL-Bp6" firstAttribute="leading" secondItem="dTa-ri-3KZ" secondAttribute="leading" constant="16" id="CwO-bL-5ro"/>
-                            <constraint firstItem="dTa-ri-3KZ" firstAttribute="trailing" secondItem="GHK-hs-kjm" secondAttribute="trailing" constant="16" id="Esk-xh-gyN"/>
-                            <constraint firstItem="dTa-ri-3KZ" firstAttribute="trailing" secondItem="Z6s-PL-Bp6" secondAttribute="trailing" constant="16" id="GSM-eH-Gof"/>
-                            <constraint firstItem="Z6s-PL-Bp6" firstAttribute="top" secondItem="GHK-hs-kjm" secondAttribute="bottom" constant="16" id="MPI-aL-6oG"/>
-                            <constraint firstItem="Sl1-Lr-KbG" firstAttribute="leading" secondItem="dTa-ri-3KZ" secondAttribute="leading" constant="16" id="OeL-jQ-x6O"/>
-                            <constraint firstItem="iAG-4W-J0U" firstAttribute="top" secondItem="dTa-ri-3KZ" secondAttribute="top" constant="16" id="c96-xl-Wlf"/>
-                            <constraint firstItem="35b-uc-ZMw" firstAttribute="top" secondItem="iAG-4W-J0U" secondAttribute="bottom" constant="16" id="gea-6W-m9g"/>
-                            <constraint firstItem="35b-uc-ZMw" firstAttribute="leading" secondItem="dTa-ri-3KZ" secondAttribute="leading" constant="16" id="l56-yh-DrV"/>
-                            <constraint firstItem="dTa-ri-3KZ" firstAttribute="trailing" secondItem="35b-uc-ZMw" secondAttribute="trailing" constant="16" id="mwI-Mv-M7E"/>
-                            <constraint firstItem="GHK-hs-kjm" firstAttribute="top" secondItem="35b-uc-ZMw" secondAttribute="bottom" constant="16" id="oUV-Cp-Ozw"/>
-                            <constraint firstItem="Sl1-Lr-KbG" firstAttribute="top" secondItem="Z6s-PL-Bp6" secondAttribute="bottom" constant="16" id="phM-3k-lka"/>
-                            <constraint firstItem="GHK-hs-kjm" firstAttribute="leading" secondItem="dTa-ri-3KZ" secondAttribute="leading" constant="16" id="qyR-Wv-Ccz"/>
-                            <constraint firstItem="iAG-4W-J0U" firstAttribute="leading" secondItem="dTa-ri-3KZ" secondAttribute="leading" constant="16" id="wC3-bj-O3c"/>
-                            <constraint firstItem="dTa-ri-3KZ" firstAttribute="trailing" secondItem="iAG-4W-J0U" secondAttribute="trailing" constant="16" id="xd3-in-XGE"/>
+                            <constraint firstItem="GHK-hs-kjm" firstAttribute="leading" secondItem="dTa-ri-3KZ" secondAttribute="leading" constant="16" id="2jC-S2-Hos"/>
+                            <constraint firstItem="dTa-ri-3KZ" firstAttribute="trailing" secondItem="f6b-jN-gGv" secondAttribute="trailing" constant="16" id="6cy-99-A54"/>
+                            <constraint firstItem="iAG-4W-J0U" firstAttribute="leading" secondItem="dTa-ri-3KZ" secondAttribute="leading" constant="16" id="B9w-GH-2dw"/>
+                            <constraint firstItem="GHK-hs-kjm" firstAttribute="top" secondItem="4Eb-A6-Fwe" secondAttribute="bottom" constant="16" id="BHf-5U-CYv"/>
+                            <constraint firstItem="dTa-ri-3KZ" firstAttribute="trailing" secondItem="GHK-hs-kjm" secondAttribute="trailing" constant="16" id="Bag-21-WEC"/>
+                            <constraint firstItem="4Eb-A6-Fwe" firstAttribute="top" secondItem="iAG-4W-J0U" secondAttribute="bottom" constant="16" id="CZ9-bk-RPY"/>
+                            <constraint firstItem="f6b-jN-gGv" firstAttribute="top" secondItem="GHK-hs-kjm" secondAttribute="bottom" constant="16" id="DCk-2y-57N"/>
+                            <constraint firstItem="iAG-4W-J0U" firstAttribute="top" secondItem="dTa-ri-3KZ" secondAttribute="top" constant="16" id="G6m-w3-h8H"/>
+                            <constraint firstItem="dTa-ri-3KZ" firstAttribute="trailing" secondItem="Sl1-Lr-KbG" secondAttribute="trailing" constant="16" id="H1H-a9-VTd"/>
+                            <constraint firstItem="4Eb-A6-Fwe" firstAttribute="leading" secondItem="dTa-ri-3KZ" secondAttribute="leading" constant="16" id="Y9l-ov-LLr"/>
+                            <constraint firstItem="f6b-jN-gGv" firstAttribute="leading" secondItem="dTa-ri-3KZ" secondAttribute="leading" constant="16" id="Yv0-7N-0I9"/>
+                            <constraint firstItem="Sl1-Lr-KbG" firstAttribute="top" secondItem="f6b-jN-gGv" secondAttribute="bottom" constant="16" id="hb1-Bh-oIJ"/>
+                            <constraint firstItem="dTa-ri-3KZ" firstAttribute="trailing" secondItem="iAG-4W-J0U" secondAttribute="trailing" constant="16" id="hz1-pk-Pjz"/>
+                            <constraint firstItem="Sl1-Lr-KbG" firstAttribute="leading" secondItem="dTa-ri-3KZ" secondAttribute="leading" constant="16" id="kCF-eo-ydC"/>
+                            <constraint firstItem="dTa-ri-3KZ" firstAttribute="trailing" secondItem="4Eb-A6-Fwe" secondAttribute="trailing" constant="16" id="qCI-Ye-TVd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add a new task" largeTitleDisplayMode="always" id="U0v-fm-fSP"/>
                     <connections>
-                        <outlet property="descriptionTextField" destination="Z6s-PL-Bp6" id="3CE-2i-frr"/>
-                        <outlet property="titleTextField" destination="35b-uc-ZMw" id="lSA-on-tM0"/>
+                        <outlet property="descriptionTextView" destination="f6b-jN-gGv" id="41g-TA-9AU"/>
+                        <outlet property="titleTextView" destination="4Eb-A6-Fwe" id="QFX-8r-iNb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RsC-Mc-WiW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2446" y="-28"/>
+            <point key="canvasLocation" x="2444.6153846153848" y="-28.436018957345969"/>
         </scene>
         <!--Task Detail View Controller-->
         <scene sceneID="VVe-pU-hv3">
@@ -270,6 +270,9 @@
         <namedColor name="TitleColor">
             <color red="0.31499999761581421" green="0.089000001549720764" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
