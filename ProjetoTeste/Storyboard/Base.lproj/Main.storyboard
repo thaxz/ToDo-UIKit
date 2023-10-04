@@ -71,13 +71,13 @@
                         <barButtonItem key="rightBarButtonItem" title="addButton" image="plus" catalog="system" id="BtN-wG-2Ah">
                             <color key="tintColor" name="AccentColor"/>
                             <connections>
-                                <segue destination="L6x-rE-Dyh" kind="show" identifier="addNewTaskSegue" id="kHS-oI-fCf"/>
+                                <segue destination="L6x-rE-Dyh" kind="show" identifier="showAddNewTask" id="kHS-oI-fCf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Dxh-8Z-bP5" id="4t3-8b-8l2"/>
-                        <segue destination="exg-e2-VsZ" kind="show" identifier="showTaskDetailSegue" id="1ot-RC-hke"/>
+                        <segue destination="exg-e2-VsZ" kind="show" identifier="showDetailView" id="1ot-RC-hke"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -219,7 +219,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="u4J-In-gCs">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="TAd-yG-06o">
                             <connections>
-                                <segue destination="L6x-rE-Dyh" kind="show" identifier="editTaskSegue" id="vSs-cf-HcO"/>
+                                <segue destination="L6x-rE-Dyh" kind="show" identifier="showEditView" id="vSs-cf-HcO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -256,7 +256,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kHS-oI-fCf"/>
+        <segue reference="vSs-cf-HcO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>

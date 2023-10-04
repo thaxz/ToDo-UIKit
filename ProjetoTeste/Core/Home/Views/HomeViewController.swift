@@ -49,7 +49,7 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let task = tasks[indexPath.row]
-        performSegue(withIdentifier: "showTaskDetailSegue", sender: task)
+        performSegue(withIdentifier: ProjectSegues.showDetailView.rawValue, sender: task)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

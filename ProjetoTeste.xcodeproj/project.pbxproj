@@ -23,6 +23,7 @@
 		E96D54D82ACDDBF200FD8D76 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54D62ACDDBF200FD8D76 /* Task+CoreDataProperties.swift */; };
 		E96D54DA2ACDDD0100FD8D76 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54D92ACDDD0100FD8D76 /* CoreDataManager.swift */; };
 		E96D54E02ACDF4B200FD8D76 /* CustomAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54DF2ACDF4B200FD8D76 /* CustomAlarm.swift */; };
+		E96D54E22ACDF50D00FD8D76 /* ProjectSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D54E12ACDF50D00FD8D76 /* ProjectSegues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		E96D54D62ACDDBF200FD8D76 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E96D54D92ACDDD0100FD8D76 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E96D54DF2ACDF4B200FD8D76 /* CustomAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlarm.swift; sourceTree = "<group>"; };
+		E96D54E12ACDF50D00FD8D76 /* ProjectSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSegues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			children = (
 				E96D54D62ACDDBF200FD8D76 /* Task+CoreDataProperties.swift */,
 				E96D54D22ACDD88F00FD8D76 /* Task.xcdatamodeld */,
+				E96D54E12ACDF50D00FD8D76 /* ProjectSegues.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				E96D54D82ACDDBF200FD8D76 /* Task+CoreDataProperties.swift in Sources */,
 				BA7A97C82A79A6D0005F349F /* TaskTableViewCell.swift in Sources */,
 				E96D54D42ACDD88F00FD8D76 /* Task.xcdatamodeld in Sources */,
+				E96D54E22ACDF50D00FD8D76 /* ProjectSegues.swift in Sources */,
 				BA7A97902A794CF2005F349F /* SceneDelegate.swift in Sources */,
 				E96D54DA2ACDDD0100FD8D76 /* CoreDataManager.swift in Sources */,
 			);
