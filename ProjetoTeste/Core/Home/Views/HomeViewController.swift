@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet var noTasksView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var numberOfTasksLabel: UILabel!
     
     // MARK: Properties
     
@@ -44,6 +45,7 @@ class HomeViewController: UIViewController {
         tasks = coreDataManager.fetchTasks()
         noTasksView.isHidden = !tasks.isEmpty
         tableView.reloadData()
+        numberOfTasksLabel.text = "Tarefas: \(tasks.count)"
     }
     
     // MARK: Navigation
