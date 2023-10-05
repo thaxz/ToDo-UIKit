@@ -7,7 +7,10 @@ import UIKit
 
 class TaskTableViewCell: UITableViewCell {
 
-    static let reuseIdentifier = "TaskCell"
+    // MARK: Outlets
     @IBOutlet weak var titleLabel: UILabel!
-
+    @IBOutlet var descriptionLabel: UILabel!
+    
+    //MARK: Properties
+    static let reuseIdentifier = "TaskCell"
 }
