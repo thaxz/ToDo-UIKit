@@ -36,6 +36,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             coreDataManager.delete(task: task)
             tasks.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            reloadData()
         }
     }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

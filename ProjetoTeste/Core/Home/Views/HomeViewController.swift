@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
     
     // MARK: Setup
     
-    private func reloadData(){
+    func reloadData(){
         tasks = coreDataManager.fetchTasks()
         noTasksView.isHidden = !tasks.isEmpty
         tableView.reloadData()
