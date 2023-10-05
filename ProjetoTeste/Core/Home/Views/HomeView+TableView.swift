@@ -18,9 +18,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TaskTableViewCell.reuseIdentifier, for: indexPath) as? TaskTableViewCell else { return UITableViewCell() }
-           let task = tasks[indexPath.row]
-           cell.titleLabel.text = task.title
-           return cell
+        let task = tasks[indexPath.row]
+        cell.titleLabel.text = task.title
+        cell.descriptionLabel.text = task.taskDescription
+        return cell
     }
     
     
