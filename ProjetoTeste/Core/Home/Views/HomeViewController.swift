@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        // Creating Nav. bar button
         navigationItem.leftBarButtonItem = editButtonItem
         reloadData()
         
@@ -34,6 +35,7 @@ class HomeViewController: UIViewController {
         reloadData()
     }
     
+    /// Enable or disable editing mode for the table view according to view controller's editing mode changes.
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         tableView.setEditing(editing, animated: animated)
@@ -41,6 +43,8 @@ class HomeViewController: UIViewController {
     
     // MARK: Setup
     
+    
+    /// Fetches tasks from Core Data and updates the tasks array.
     func reloadData(){
         tasks = coreDataManager.fetchTasks()
         noTasksView.isHidden = !tasks.isEmpty
@@ -50,6 +54,7 @@ class HomeViewController: UIViewController {
     
     // MARK: Navigation
     
+    /// Passes the selected task to the TaskDetailViewController.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? TaskDetailViewController,
            let task = sender as? Task {
