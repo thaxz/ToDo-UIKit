@@ -26,8 +26,9 @@ class TaskDetailViewController: UIViewController, TaskEditDelegate {
         setupUI()
     }
     
-    // MARK: Delegate
+    // MARK: TaskEditDelegate Method
     
+    /// Updates the task details after editing
     func didEditTask(task: Task) {
         self.task = task
         setupUI()
@@ -35,6 +36,7 @@ class TaskDetailViewController: UIViewController, TaskEditDelegate {
     
     // MARK: UI Setup
     
+    /// Configures UI with task details.
     private func setupUI() {
         if let task = task {
             taskTitleLabel.text = task.title
@@ -47,12 +49,14 @@ class TaskDetailViewController: UIViewController, TaskEditDelegate {
     
     // MARK: Actions
     
+    /// Handles the edit button action and performs segue for editing the task.
     @IBAction func editTask(_ sender: Any) {
         performSegue(withIdentifier: ProjectSegues.showEditView.rawValue, sender: task)
     }
     
     // MARK: Navigation
     
+    /// Prepares for navigation and passes the task for editing.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == ProjectSegues.showEditView.rawValue {
             if let destinationVC = segue.destination as? AddTaskViewController,

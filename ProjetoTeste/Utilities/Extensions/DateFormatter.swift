@@ -7,6 +7,9 @@
 
 import Foundation
 
+// Extension to DateFormatter providing a pre-configured instance for date formatting.
+// Format: "dd 'de' MMMM 'de' yyyy - HH:mm" (e.g., "04 de Outubro de 2023 - 14:30")
+
 extension DateFormatter {
     static let customDateFormatter: DateFormatter = {
             let formatter = DateFormatter()

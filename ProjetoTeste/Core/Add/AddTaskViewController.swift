@@ -21,8 +21,10 @@ class AddTaskViewController: UIViewController {
     // MARK: Properties
     
     private var coreDataManager = CoreDataManager.shared
-    var taskToEdit: Task?
     weak var editDelegate: TaskEditDelegate?
+    
+    // Represents if there's a task being edited
+    var taskToEdit: Task?
     
     // MARK: View Lifecycle
     
@@ -32,8 +34,10 @@ class AddTaskViewController: UIViewController {
         setupUI()
     }
     
-    // MARK: UI Setup
+    // MARK: Setup
     
+    /// Configures UI elements and TextView placeholders.
+    /// The view becomes an edit view if receiving an existing task and a add new task view if not.
     private func setupUI() {
         setupTextView(titleTextView, withPlaceholder: "Digite o título da tarefa")
         setupTextView(descriptionTextView, withPlaceholder: "Digite a descrição da tarefa")
@@ -49,24 +53,27 @@ class AddTaskViewController: UIViewController {
     
     // MARK: Actions
     
+    /// Handles the save button action and either creates a new task or updates an existing one.
     @IBAction func saveNewTask(_ sender: UIButton) {
         guard let title = titleTextView.text,
-                      let description = descriptionTextView.text,
-                      title != "Digite o título da tarefa",
-                      description != "Digite a descrição da tarefa" else {
-                    displayAlert(message: "Por favor, preencha todos os campos.")
-                    return
-                }
-                
-                if let task = taskToEdit {
-                    // Se taskToEdit não for nil, estamos editando uma tarefa existente.
-                    coreDataManager.updateTask(task: task, newTitle: title, newDescription: description)
-                    editDelegate?.didEditTask(task: task)
-                } else {
-                    // Caso contrário, estamos adicionando uma nova tarefa.
-                    coreDataManager.createTask(title: title, description: description)
-                }
-                navigationController?.popViewController(animated: true)
+              let description = descriptionTextView.text,
+              // Ensures the title is not the default placeholder text.
+              title != "Digite o título da tarefa",
+              description != "Digite a descrição da tarefa" else {
+            // Displays an alert if either the title or description is empty or contains placeholder text.
+            displayAlert(message: "Por favor, preencha todos os campos.")
+            return
+        }
+        
+        if let task = taskToEdit {
+            // If taskToEdit is not nil, we are editing an existing task.
+            coreDataManager.updateTask(task: task, newTitle: title, newDescription: description)
+            editDelegate?.didEditTask(task: task)
+        } else {
+            // Otherwise, we are adding a new task.
+            coreDataManager.createTask(title: title, description: description)
+        }
+        navigationController?.popViewController(animated: true)
     }
     
 }

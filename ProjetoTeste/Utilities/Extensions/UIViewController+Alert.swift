@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-// Creating custom alert
+// Extension to UIViewController providing a method to display a custom alert.
 
 extension UIViewController {
     func displayAlert(message: String) {
