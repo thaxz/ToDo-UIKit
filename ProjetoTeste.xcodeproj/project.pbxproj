@@ -105,6 +105,7 @@
 		BA7A97812A794CF2005F349F = {
 			isa = PBXGroup;
 			children = (
+				E90CB1892ACFAA1800A01FBA /* README.md */,
 				BA7A978C2A794CF2005F349F /* ProjetoTeste */,
 				BA7A97A32A794CFA005F349F /* ProjetoTesteTests */,
 				BA7A97AD2A794CFA005F349F /* ProjetoTesteUITests */,
@@ -125,7 +126,6 @@
 		BA7A978C2A794CF2005F349F /* ProjetoTeste */ = {
 			isa = PBXGroup;
 			children = (
-				E90CB1892ACFAA1800A01FBA /* README.md */,
 				BA7A978D2A794CF2005F349F /* AppDelegate.swift */,
 				BA7A978F2A794CF2005F349F /* SceneDelegate.swift */,
 				E96D54DE2ACDF48C00FD8D76 /* Storyboard */,
