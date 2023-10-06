@@ -27,7 +27,6 @@ class HomeViewController: UIViewController {
         // Creating Nav. bar button
         navigationItem.leftBarButtonItem = editButtonItem
         reloadData()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,7 +41,6 @@ class HomeViewController: UIViewController {
     }
     
     // MARK: Setup
-    
     
     /// Fetches tasks from Core Data and updates the tasks array.
     func reloadData(){

@@ -77,9 +77,4 @@ class CoreDataManager {
         context.delete(task)
         save()
     }
-    
-
-    
-    
-    
 }

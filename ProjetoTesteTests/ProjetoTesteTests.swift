@@ -18,19 +18,22 @@ final class ProjetoTesteTests: XCTestCase {
         coreDataManager = nil
     }
     
-    func testExample() throws {
-        /// given
-        let title = "Test Task"
-        let description = "Test Description"
-        coreDataManager.createTask(title: title, description: description)
-        
-        ///when
-        // Tenta encontrar a tarefa
-        let tasks = coreDataManager.fetchTasks()
-        let createdTask = tasks.first { $0.title == title && $0.taskDescription == description }
-        ///then
-        XCTAssertNotNil(createdTask)
-    }
+    // Test to create a task and verify if it is stored properly in CoreData.
+        func testTaskCreation() throws {
+            // Given
+            let title = "Test Task"
+            let description = "Test Description"
+            
+            // When
+            coreDataManager.createTask(title: title, description: description)
+            
+            // Tries to fetch the tasks and find the created one.
+            let tasks = coreDataManager.fetchTasks()
+            let createdTask = tasks.first { $0.title == title && $0.taskDescription == description }
+            
+            // Then
+            XCTAssertNotNil(createdTask, "Failed to create and store the task in Core Data.")
+        }
     
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
