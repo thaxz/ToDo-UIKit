@@ -24,7 +24,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        // Creating Nav. bar button
         navigationItem.leftBarButtonItem = editButtonItem
         reloadData()
     }

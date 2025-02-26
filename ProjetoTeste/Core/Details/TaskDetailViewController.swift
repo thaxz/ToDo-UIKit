@@ -42,7 +42,8 @@ class TaskDetailViewController: UIViewController, TaskEditDelegate {
             taskTitleLabel.text = task.title
             taskDescriptionLabel.text = task.taskDescription
             if let dateCreated = task.dateCreated {
-                creationDateLabel.text = DateFormatter.customDateFormatter.string(from: dateCreated)
+                let formattedLabel = DateFormatter.customDateFormatter.string(from: dateCreated)
+                creationDateLabel.text = formattedLabel
             }
         }
     }
@@ -66,5 +67,4 @@ class TaskDetailViewController: UIViewController, TaskEditDelegate {
             }
         }
     }
-    
 }

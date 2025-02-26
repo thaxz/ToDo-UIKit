@@ -60,14 +60,15 @@ class AddTaskViewController: UIViewController {
               // Ensures the title is not the default placeholder text.
               title != "Digite o título da tarefa",
               description != "Digite a descrição da tarefa" else {
-            // Displays an alert if either the title or description is empty or contains placeholder text.
+            // Displays an alert if the text or is empty or contains placeholder
             displayAlert(message: "Por favor, preencha todos os campos.")
             return
         }
-        
         if let task = taskToEdit {
             // If taskToEdit is not nil, we are editing an existing task.
-            coreDataManager.updateTask(task: task, newTitle: title, newDescription: description)
+            coreDataManager.updateTask(task: task,
+                                       newTitle: title,
+                                       newDescription: description)
             editDelegate?.didEditTask(task: task)
         } else {
             // Otherwise, we are adding a new task.
@@ -75,5 +76,4 @@ class AddTaskViewController: UIViewController {
         }
         navigationController?.popViewController(animated: true)
     }
-    
 }

@@ -10,6 +10,7 @@ import CoreData
 
 class CoreDataManager {
     
+    /// Shared instance
     static let shared = CoreDataManager()
     
     /// Persistence objects
@@ -28,7 +29,6 @@ class CoreDataManager {
         print("working")
     }
     
-    // MARK: Save
     /// Saves into Core Data .
     func save(){
         do {
@@ -40,8 +40,10 @@ class CoreDataManager {
     
     // MARK: CRUD
     
-    /// Create
-    /// Creates a new task with the provided title and description.
+    /// Creates a new task and saves it to Core Data.
+    /// - Parameters:
+    ///   - title: The title of the task.
+    ///   - description: A detailed description of the task.
     func createTask(title: String, description: String) {
         let task = Task(context: context)
         task.id = UUID()
@@ -51,8 +53,8 @@ class CoreDataManager {
         save()
     }
     
-    /// Fetch
-    /// Fetches all tasks from Core Data.
+    /// Fetches all tasks stored in Core Data.
+    /// - Returns: An array of `Task` objects, or an empty array if fetching fails.
     func fetchTasks() -> [Task] {
         let request: NSFetchRequest<Task> = Task.fetchRequest()
         do {
@@ -63,16 +65,19 @@ class CoreDataManager {
         }
     }
     
-    /// Update
-    /// Updates the title and description of the task in
+    /// Updates an existing task's title and description.
+    /// - Parameters:
+    ///   - task: The `Task` object to update.
+    ///   - newTitle: The new title for the task.
+    ///   - newDescription: The new description for the task.
     func updateTask(task: Task, newTitle: String, newDescription: String){
         task.title = newTitle
         task.taskDescription = newDescription
         save()
     }
     
-    /// Delete
-    /// Removes the specified task from Core Data.
+    /// Deletes a specified task from Core Data.
+    /// - Parameter task: The `Task` object to be deleted.
     func delete(task: Task){
         context.delete(task)
         save()

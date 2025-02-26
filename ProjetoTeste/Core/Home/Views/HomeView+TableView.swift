@@ -19,7 +19,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     /// Configures and returns a custom cell for the specified row index path.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TaskTableViewCell.reuseIdentifier, for: indexPath) as? TaskTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: TaskTableViewCell.reuseIdentifier,
+            for: indexPath) as? TaskTableViewCell else { return UITableViewCell() }
         let task = tasks[indexPath.row]
         cell.titleLabel.text = task.title
         cell.descriptionLabel.text = task.taskDescription
@@ -33,7 +35,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     /// Handles deletion of tasks when viewController's editing mode is activated
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = tasks[indexPath.row]
             coreDataManager.delete(task: task)
@@ -42,5 +45,4 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             reloadData()
         }
     }
-    
 }
